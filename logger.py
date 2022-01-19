@@ -1,13 +1,15 @@
 import logging
 
 NAME = __name__
-FMT = '%(asctime)s : %(filename)s : %(name)s : %(message)s'
-DATEFMT = '%d-%b-%y %H:%M:%S'
+FMT = "%(asctime)s : %(filename)s : %(name)s : %(message)s"
+DATEFMT = "%d-%b-%y %H:%M:%S"
 LEVEL = logging.DEBUG
-FILENAME = 'logs.log'
+FILENAME = "logs.log"
 
 
-def log(name = NAME, filename = FILENAME, level = LEVEL, fmt = FMT, datefmt = DATEFMT) -> logging.Logger:
+def log(
+    name=NAME, filename=FILENAME, level=LEVEL, fmt=FMT, datefmt=DATEFMT
+) -> logging.Logger:
 
     logger = logging.getLogger(name)
     logger.setLevel(level)
@@ -27,7 +29,6 @@ def log(name = NAME, filename = FILENAME, level = LEVEL, fmt = FMT, datefmt = DA
     return logger
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     logger = log(name=__name__)
-    logger.info('Logging...')
-
+    logger.info("Logging...")
