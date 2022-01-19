@@ -1,5 +1,7 @@
 # PyWallpaper
 
+Works on windows
+
 PyWallpaper scrapes https://windows10spotlight.com/ and changes your wallpaper.
 
 Requirements:
